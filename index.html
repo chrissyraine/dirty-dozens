@@ -39,12 +39,21 @@
 
     /* ─── HEADER / NAV ─── */
     header {
-      background: var(--dark-charcoal);
+      background: transparent;
       padding: 1rem 2rem;
       display: flex;
       justify-content: space-between;
       align-items: center;
-      border-bottom: 3px solid var(--sky-blue);
+      border-bottom: none;
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      z-index: 100;
+      transition: background 0.4s ease, border-color 0.4s ease;
+    }
+    header.scrolled {
+      background: rgba(26,26,30,0.95);
+      backdrop-filter: blur(12px);
+      border-bottom: 2px solid var(--sky-blue);
     }
     header .logo {
       font-family: 'Dancing Script', cursive;
@@ -667,5 +676,12 @@
   <p><strong>Google Business Profile Tip:</strong> Make sure the business name, address, and phone number (NAP) listed on this website exactly match what's on your Google Business Profile for maximum local search visibility.</p>
 </div>
 
+
+<script>
+  const header = document.querySelector('header');
+  window.addEventListener('scroll', () => {
+    header.classList.toggle('scrolled', window.scrollY > 40);
+  });
+</script>
 </body>
 </html>
