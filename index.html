@@ -67,10 +67,21 @@
       background:
         linear-gradient(to bottom, rgba(26,26,30,0.55) 0%, rgba(26,26,30,0.7) 100%),
         url('just_have_the_202604130150.jpg') center center / cover no-repeat;
+      background-attachment: fixed;
       color: var(--white);
       text-align: center;
-      padding: 6rem 2rem 5rem;
+      padding: 8rem 2rem 6rem;
       position: relative;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+    }
+    .hero-inner {
+      max-width: 800px;
+      margin: 0 auto;
+      width: 100%;
     }
     .hero-logo {
       width: 140px;
@@ -127,9 +138,12 @@
 
     /* ─── SECTIONS ─── */
     section {
+      width: 100%;
+      padding: 4rem 3rem;
+    }
+    .inner {
       max-width: 1200px;
       margin: 0 auto;
-      padding: 4rem 3rem;
     }
     section h2 {
       font-family: 'Dancing Script', cursive;
@@ -406,12 +420,14 @@
      Frameworks: AIDA (Attention + Interest), Friend-Expert
      ════════════════════════════════════════════════════ -->
 <section class="hero">
-  <img src="logo.png" alt="Dirty Dozens Sweets and Treats logo" class="hero-logo">
-  <h1>Life's Too Short for Boring Cake</h1>
-  <p>Handcrafted cupcakes and custom cakes baked from scratch in Oil City, PA &mdash; because every celebration deserves something made with love (and a little bit of chaos).</p>
-  <div class="cta-group">
-    <a href="#order" class="btn btn-primary">Order for Pickup</a>
-    <a href="#menu" class="btn btn-outline">See What's Baking</a>
+  <div class="hero-inner">
+    <img src="logo.png" alt="Dirty Dozens Sweets and Treats logo" class="hero-logo">
+    <h1>Life's Too Short for Boring Cake</h1>
+    <p>Handcrafted cupcakes and custom cakes baked from scratch in Oil City, PA &mdash; because every celebration deserves something made with love (and a little bit of chaos).</p>
+    <div class="cta-group">
+      <a href="#order" class="btn btn-primary">Order for Pickup</a>
+      <a href="#menu" class="btn btn-outline">See What's Baking</a>
+    </div>
   </div>
 </section>
 
@@ -420,19 +436,22 @@
      Frameworks: Story-Solve-Sell, Friend-Expert
      ════════════════════════════════════════════════════ -->
 <section class="about" id="about">
-  <h2>A Kitchen, Five Kids, and a Whole Lot of Butter</h2>
+  <div class="inner">
+    <h2>A Kitchen, Five Kids, and a Whole Lot of Butter</h2>
 
-  <p>Dirty Dozens Sweets and Treats started the way most great things do &mdash; with a mom who refused to buy a grocery store cake one more time. Amanda Waters taught herself to bake between school pickups, soccer practices, and the beautiful chaos of raising five kids.</p>
+    <p>Dirty Dozens Sweets and Treats started the way most great things do &mdash; with a mom who refused to buy a grocery store cake one more time. Amanda Waters taught herself to bake between school pickups, soccer practices, and the beautiful chaos of raising five kids.</p>
 
-  <p>What began as cupcakes for birthday parties turned into a full-blown obsession. Neighbors started asking. Then their neighbors. Then people across Oil City, PA who'd heard about "that mom who makes the cakes." Amanda never went to culinary school. She didn't need to. She had determination, a stand mixer, and the kind of perfectionism that only a mom of five can develop.</p>
+    <p>What began as cupcakes for birthday parties turned into a full-blown obsession. Neighbors started asking. Then their neighbors. Then people across Oil City, PA who'd heard about "that mom who makes the cakes." Amanda never went to culinary school. She didn't need to. She had determination, a stand mixer, and the kind of perfectionism that only a mom of five can develop.</p>
 
-  <p>Today, every cupcake, every custom cake, and every last crumb that comes out of Dirty Dozens is still made from scratch &mdash; with real ingredients, real care, and the same passion that started it all. Because around here, we don't cut corners. We frost them.</p>
+    <p>Today, every cupcake, every custom cake, and every last crumb that comes out of Dirty Dozens is still made from scratch &mdash; with real ingredients, real care, and the same passion that started it all. Because around here, we don't cut corners. We frost them.</p>
+  </div>
 </section>
 
 <!-- ════════════════════════════════════════════════════
      FULL BAKERY MENU
      ════════════════════════════════════════════════════ -->
 <section class="menu-highlights" id="menu">
+  <div class="inner">
   <h2>Oil City's Favorite Flavors</h2>
   <p style="text-align:center; max-width:600px; margin:0 auto 1rem;">Every cupcake, every cake, every crumb &mdash; baked fresh to order with real ingredients. No mixes. No shortcuts. Just the good stuff.</p>
 
@@ -576,12 +595,14 @@
   <!-- ── PRICING NOTE ── -->
   <p style="text-align:center; margin-top:2rem; font-size:0.95rem; color:var(--text-light);">For pricing and questions, call <a href="tel:8147582519" style="color:var(--sky-blue);">(814) 758-2519</a> or email <a href="mailto:dirtydozens111@gmail.com" style="color:var(--sky-blue);">dirtydozens111@gmail.com</a><br>Follow us on Facebook for seasonal flavors!</p>
 
+  </div>
 </section>
 
 <!-- ════════════════════════════════════════════════════
      PHOTO GALLERY
      ════════════════════════════════════════════════════ -->
 <section class="gallery" id="gallery">
+  <div class="inner">
   <h2>A Peek at Our Creations</h2>
   <p style="text-align:center; max-width:500px; margin:0 auto;">From cupcake bouquets to tiered wedding cakes &mdash; every order is a labor of love, made right here in Oil City, PA.</p>
 
@@ -590,6 +611,7 @@
     <img src="center_the_cake_202604130127.jpg" alt="Strawberry tiered cake by Dirty Dozens Sweets and Treats">
     <img src="upscale_for_high_202604130115.jpg" alt="Amanda at the Dirty Dozens Sweets and Treats booth at a local Oil City event">
     <img src="just_have_the_202604130150.jpg" alt="Cupcake spread featuring flag cupcake cake and specialty cupcakes">
+  </div>
   </div>
 </section>
 
